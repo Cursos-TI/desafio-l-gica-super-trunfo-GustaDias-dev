@@ -1,21 +1,29 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
+int main (){
 
-int main() {
-        //Variaveis
-    char pais [20];
+    //CARTA1
+
+    //Variáveis
+    char estado;
+    char carta[20];
+    char cidade[20];
     int populacao;
     float area;
     float pib;
     int pturisticos;
-    int escolha1;
+    float densidade_populacional;
+    float pib_capita;
+    int escolha1,escolha2;
+    int resultado;
+    int comparacao;
+
+    densidade_populacional = (float) (populacao / area);
+    pib_capita = (float) (pib / populacao);
+    
     //Cadastro
     printf("Digite o Nome do País: \n");
-    scanf("%s", &pais);
+    scanf("%s", &estado);
     printf("Digite o número de habitantes: \n");
     scanf("%d", &populacao);
     printf("Digite a Área: \n");
@@ -24,45 +32,41 @@ int main() {
     scanf("%f", &pib);
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &pturisticos);
-
-    printf("Escolha um atributo: \n");
+    printf("Densidade Populacional: %f pessoas/km²\n", densidade_populacional);
+    printf("PIB per capita: %f reais\n", pib_capita);
+    
+    //Escolhas
+    printf("Escolha dois atributos: \n");
     printf("1. População.\n");
     printf("2. Àrea.\n");
     printf("3. PIB.\n");
     printf("4. Pontos turísticos.\n");
-    printf("Escolha: ");
-    scanf("%d", &escolha1);
+    printf("5. Densidade populacional\n");
+    printf("6. PIB per capita\n");
+    printf("Escolhas: ");
+    scanf("%d e %d", &escolha1, &escolha2);
 
-    switch (escolha1)
-    {
-    case 1:
-    printf("O jogador 1 escolheu população\n");
-    break;
-    case 2:
-    printf("O jogador 1 escolheu Àrea\n");
-    break;
-    case 3:
-    printf("O jogador 1 escolheu PIb\n");
-    break;
-    case 4:
-    printf("O jogador 1 escolheu Pontos turísticos\n");
-    break;
-    default:
-    printf("Número inválido\n");
-    break;
-    }
+    //CARTA2
 
-
-    //carta2
-    char pais2 [20];
+    //Variáveis
+    char estado2;
+    char carta2[20];
+    char cidade2[20];
     int populacao2;
     float area2;
     float pib2;
     int pturisticos2;
-    int escolha2;
+    float densidade_populacional2;
+    float pib_capita2;
+    int escolha3,escolha4;
+    int resultado2;
+
+    densidade_populacional2 = (float) (populacao2 / area2);
+    pib_capita2 = (float) (pib2 / populacao2);
+    
     //Cadastro
     printf("Digite o Nome do País: \n");
-    scanf("%s", &pais2);
+    scanf("%s", &estado2);
     printf("Digite o número de habitantes: \n");
     scanf("%d", &populacao2);
     printf("Digite a Área: \n");
@@ -71,43 +75,57 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &pturisticos2);
-
-    printf("Escolha um atributo: \n");
+    printf("Densidade Populacional: %f pessoas/km²\n", densidade_populacional2);
+    printf("PIB per capita: %f reais\n", pib_capita2);
+    
+    //Escolhas
+    printf("Escolha dois atributos: \n");
     printf("1. População.\n");
     printf("2. Àrea.\n");
     printf("3. PIB.\n");
     printf("4. Pontos turísticos.\n");
-    printf("Escolha: ");
-    scanf("%d", &escolha2);
+    printf("5. Densidade populacional\n");
+    printf("6. PIB per capita\n");
+    printf("Escolhas: ");
+    scanf("%d e %d", &escolha3, &escolha4);
 
-    switch (escolha2)
+
+    switch (comparacao)
     {
     case 1:
-    printf("O jogador 1 escolheu população\n");
-    break;
+        printf("Jogador 1 escolheu população\n");
+        resultado = escolha1 && escolha2 > escolha3 && escolha4 ? 1 : 0;
+        break;
     case 2:
-    printf("O jogador 1 escolheu Àrea\n");
-    break;
+        printf("Jogador 1 escolheu área\n");
+        resultado = escolha1 && escolha2 > escolha3 && escolha4 ? 1 : 0;
+        break;
     case 3:
-    printf("O jogador 1 escolheu PIb\n");
-    break;
+        printf("Jogador 1 escolheu PIB\n");
+        resultado = escolha1 && escolha2 > escolha3 && escolha4 ? 1 : 0;
+        break;
     case 4:
-    printf("O jogador 1 escolheu Pontos turísticos\n");
-    break;
+        printf("Jogador 1 escolheu Pontos turísticos\n");
+        resultado = escolha1 && escolha2 > escolha3 && escolha4 ? 1 : 0;
+        break;
+    case 5:
+        printf("Jogador 1 escolheu Densidade\n");
+        resultado = escolha1 && escolha2 < escolha3 && escolha4 ? 1 : 0;
+        break;
+    case 6:
+        printf("Jogador 1 escolheu PIB per capita\n");
+        resultado = escolha1 && escolha2 > escolha3 && escolha4 ? 1 : 0;
+        break;
+    
     default:
-    printf("Número inválido\n");
-    break;
+        break;
+    }
+    if (resultado = 1)
+    {
+        printf("O Jogador 1 venceu!\n");
+    } else {
+        printf("O Jogador 2 venceu!\n");
     }
 
-    if (escolha1 > escolha2)
-    {
-        printf("Jogador 1 Venceu!\n");
-    } else {
-        printf("Jogador 2 Venceu!\n");
-    }
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
-    
-    
-    return 0;
+
 }
