@@ -117,8 +117,8 @@ int main() {
     printf("Super Poder: Carta %d venceu\n", superpoder1 > superpoder2);*/
 
     printf("Comparação:\n");
-    printf("Carta 1 - %s : %d",nomeCidade1, populacao1);
-    printf("Carta 2 - %s : %d",nomeCidade2, populacao2);
+    printf("Carta 1 - %s : %d\n",nomeCidade1, populacao1);
+    printf("Carta 2 - %s : %d\n",nomeCidade2, populacao2);
 
 
     if (populacao1 > populacao2){
