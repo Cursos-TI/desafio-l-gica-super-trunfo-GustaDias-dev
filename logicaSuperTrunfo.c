@@ -19,6 +19,7 @@ int main() {
     float densidade1;
     float pibcap1;
     float superpoder1;
+    int escolha1;
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
@@ -58,6 +59,7 @@ int main() {
     float densidade2;
     float pibcap2;
     float superpoder2;
+    int escolha2;
 
     printf("\nCadastro da Carta 2:\n");
     printf("Estado (A-H): ");
@@ -116,7 +118,7 @@ int main() {
     printf("PIB per Capita: Carta %d venceu\n", pibcap1 > pibcap2);
     printf("Super Poder: Carta %d venceu\n", superpoder1 > superpoder2);*/
 
-    printf("Comparação:\n");
+    /*printf("Comparação:\n");
     printf("Carta 1 - %s : %d\n",nomeCidade1, populacao1);
     printf("Carta 2 - %s : %d\n",nomeCidade2, populacao2);
 
@@ -127,7 +129,61 @@ int main() {
         printf ("Empate \n");
     } else {
         printf("A Carta 2 Venceu! \n");
+    }*/
+    printf("Escolha um atributo para comparação... \n");
+    printf("1 - População \n");
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - Pontos turísticos \n");
+    printf("5 - Densidade demográfica \n");
+
+   switch (escolha1) {
+    case 1: 
+    printf("O jogador 1 escolheu População \n");
+    break;
+    case 2:
+    printf("O jogador 1 escolheu Área \n");
+    break;
+    case 3:
+    printf("O jogador 1 escolheu PIB \n");
+    break;
+    case 4:
+    printf("O jogador 1 escolheu Pontos turísticos \n");
+    break;
+    case 5:
+    printf("O jogador 1 escolheu Densidade demográfica \n");
+    break;
+    default:
+    printf("Opção inválida \n");
+   }
+
+   switch (escolha2) {
+    case 1: 
+    printf("O jogador 2 escolheu População \n");
+    break;
+    case 2:
+    printf("O jogador 2 escolheu Área \n");
+    break;
+    case 3:
+    printf("O jogador 2 escolheu PIB \n");
+    break;
+    case 4:
+    printf("O jogador 2 escolheu Pontos turísticos \n");
+    break;
+    case 5:
+    printf("O jogador 2 escolheu Densidade demográfica \n");
+    break;
+    default:
+    printf("Opção inválida \n");
+
+    if (escolha1 > escolha2){
+        printf("O jogador 1 venceu!\n");
+    } else if (escolha1 == escolha2){
+        printf("Empate! \n");
+    } else {
+        printf("O jogador 2 venceu!");
     }
+   }
 
 
     return 0;
