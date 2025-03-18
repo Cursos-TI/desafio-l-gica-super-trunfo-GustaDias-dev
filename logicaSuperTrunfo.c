@@ -136,7 +136,9 @@ int main() {
     printf("3 - PIB \n");
     printf("4 - Pontos turísticos \n");
     printf("5 - Densidade demográfica \n");
+    scanf ("%d", escolha1);
 
+    
    switch (escolha1) {
     case 1: 
     printf("O jogador 1 escolheu População \n");
@@ -157,6 +159,14 @@ int main() {
     printf("Opção inválida \n");
    }
 
+    printf("Escolha um atributo para comparação... \n");
+    printf("1 - População \n");
+    printf("2 - Área \n");
+    printf("3 - PIB \n");
+    printf("4 - Pontos turísticos \n");
+    printf("5 - Densidade demográfica \n");
+    scanf ("%d", escolha2);
+    
    switch (escolha2) {
     case 1: 
     printf("O jogador 2 escolheu População \n");
@@ -175,15 +185,6 @@ int main() {
     break;
     default:
     printf("Opção inválida \n");
-
-    if (escolha1 > escolha2){
-        printf("O jogador 1 venceu!\n");
-    } else if (escolha1 == escolha2){
-        printf("Empate! \n");
-    } else {
-        printf("O jogador 2 venceu!");
-    }
-   }
 
 
     return 0;
